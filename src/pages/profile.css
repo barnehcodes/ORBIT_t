@@ -1,0 +1,83 @@
+.back {
+  position: absolute;
+
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: auto 1fr auto; /* Adjust row sizes as needed */
+  min-height: 100vh; /* Ensure the grid covers the entire viewport height */
+  gap: 20px;
+}
+
+.awesome {
+  background: radial-gradient(ellipse at bottom, #4f637a 0%, #090a0f 100%);
+  background-size: 600% 100%;
+  overflow: hidden;
+}
+
+.head {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#title {
+  top: 60px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+.download-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+.grid-item {
+  display: block;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 38px;
+  margin: 40px;
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+}
+
+.datatable {
+  display: inline-block;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.scrollable-content {
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 500px; /* Define the maximum height of the scrollable content */
+}

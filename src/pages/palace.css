@@ -1,0 +1,138 @@
+.background {
+  position: absolute;
+
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: auto 1fr auto; /* Adjust row sizes as needed */
+  min-height: 100vh; /* Ensure the grid covers the entire viewport height */
+  gap: 20px;
+}
+.awesomeBG {
+  background: linear-gradient(
+    to left,
+    #3c3941,
+    #0a53da,
+    #3c3941,
+    #0a53da,
+    #3c3941
+  );
+  background-size: 600% 100%;
+  animation: AwesomeBG 10s ease infinite;
+  overflow: hidden;
+}
+@keyframes AwesomeBG {
+  0% {
+    background-position: 0 0;
+  }
+  5% {
+    background-position: 8% 0;
+  }
+  13% {
+    background-position: 15% 0;
+  }
+  19% {
+    background-position: 23% 0;
+  }
+  25% {
+    background-position: 30% 0;
+  }
+  31% {
+    background-position: 38% 0;
+  }
+  38% {
+    background-position: 45% 0;
+  }
+  44% {
+    background-position: 53% 0;
+  }
+  50% {
+    background-position: 60% 0;
+  }
+  56% {
+    background-position: 68% 0;
+  }
+  63% {
+    background-position: 75% 0;
+  }
+  69% {
+    background-position: 83% 0;
+  }
+  75% {
+    background-position: 90% 0;
+  }
+  81% {
+    background-position: 98% 0;
+  }
+  88% {
+    background-position: 105% 0;
+  }
+  94% {
+    background-position: 113% 0;
+  }
+  100% {
+    background-position: 120% 0;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+/* old stuff  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  grid-row: 1;
+}
+
+.upload {
+  grid-row: 2;
+}
+
+.datatable {
+  grid-row: 3;
+}
+
+.datatable {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.datatable > div {
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.datatable > div img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.datatable > div h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.datatable > div p {
+  margin: 5px 0;
+}
